@@ -12,13 +12,6 @@ library(reshape2, quietly=T)
 
 set.seed(20210429)
 
-rastlist <- list.files(path = getwd(), 
-	pattern='forest_cover.tif$', 
-	all.files=T, 
-	full.names=F)
-ras <- stack(rastlist)
-crs(ras) <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
-
 # define urls
 #2015
 u2015_1 <- "https://s3-eu-west-1.amazonaws.com/vito.landcover.global/v3.0.1/2015/E000N80/E000N80_PROBAV_LC100_global_v3.0.1_2015-base_Tree-CoverFraction-layer_EPSG-4326.tif"
